@@ -3,12 +3,13 @@
 # Run using Docker
 
 - Ensure there is a .env file under weather-app/apps/weather-app/.env
+- (see .env.sample)
 
 ```sh
-docker-compose up --build
+docker-compose up
 ```
 
-- Go to localhost:80 (React App)
+- Go to localhost:8080 (React App)
 - Backend: localhost:3000/api
 
 # OR run manually
