@@ -1,15 +1,17 @@
 # WeatherApp
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+# Run using Docker
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+- Ensure there is a .env file under weather-app/apps/weather-app/.env
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/nest?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+```sh
+docker-compose up --build
+```
 
-## Finish your CI setup
+- Go to localhost:8080 (React App)
+- Backend: localhost:3000/api
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/jQH0fZVSMg)
-
+# OR run manually
 
 ## Run tasks
 

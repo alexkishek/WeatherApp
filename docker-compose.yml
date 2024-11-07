@@ -1,0 +1,33 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '27017:27017'
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/weather-app/Dockerfile
+    container_name: weather-app-api
+    env_file:
+      - apps/weather-app/.env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/weather-app-react/Dockerfile
+    container_name: weather-app-react
+    ports:
+      - '80:80'
+    depends_on:
+      - api
+
+volumes:
+  mongo-data:

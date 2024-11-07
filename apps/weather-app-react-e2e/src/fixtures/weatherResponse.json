@@ -1,0 +1,376 @@
+{
+  "temperature": 69,
+  "high": 69,
+  "low": 48,
+  "hourlyBreakdown": [
+    {
+      "time": "3 PM",
+      "temperature": 69,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d"
+    },
+    {
+      "time": "4 PM",
+      "temperature": 69,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d"
+    },
+    {
+      "time": "5 PM",
+      "temperature": 67,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d"
+    },
+    {
+      "time": "6 PM",
+      "temperature": 65,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "7 PM",
+      "temperature": 62,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "8 PM",
+      "temperature": 59,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "9 PM",
+      "temperature": 58,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "10 PM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "11 PM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "12 AM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "1 AM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "2 AM",
+      "temperature": 56,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02n"
+    },
+    {
+      "time": "3 AM",
+      "temperature": 55,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02n"
+    },
+    {
+      "time": "4 AM",
+      "temperature": 54,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "5 AM",
+      "temperature": 52,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "6 AM",
+      "temperature": 51,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "7 AM",
+      "temperature": 51,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "8 AM",
+      "temperature": 51,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "9 AM",
+      "temperature": 51,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "10 AM",
+      "temperature": 53,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "11 AM",
+      "temperature": 55,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "12 PM",
+      "temperature": 57,
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d"
+    },
+    {
+      "time": "1 PM",
+      "temperature": 58,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "2 PM",
+      "temperature": 59,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "3 PM",
+      "temperature": 60,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "4 PM",
+      "temperature": 60,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "5 PM",
+      "temperature": 59,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "6 PM",
+      "temperature": 58,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "7 PM",
+      "temperature": 57,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "8 PM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "9 PM",
+      "temperature": 55,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "10 PM",
+      "temperature": 54,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "11 PM",
+      "temperature": 53,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "12 AM",
+      "temperature": 52,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "1 AM",
+      "temperature": 51,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01n"
+    },
+    {
+      "time": "2 AM",
+      "temperature": 51,
+      "weatherStatus": "overcast clouds",
+      "weatherIcon": "04n"
+    },
+    {
+      "time": "3 AM",
+      "temperature": 50,
+      "weatherStatus": "overcast clouds",
+      "weatherIcon": "04n"
+    },
+    {
+      "time": "4 AM",
+      "temperature": 50,
+      "weatherStatus": "broken clouds",
+      "weatherIcon": "04n"
+    },
+    {
+      "time": "5 AM",
+      "temperature": 49,
+      "weatherStatus": "broken clouds",
+      "weatherIcon": "04n"
+    },
+    {
+      "time": "6 AM",
+      "temperature": 49,
+      "weatherStatus": "scattered clouds",
+      "weatherIcon": "03n"
+    },
+    {
+      "time": "7 AM",
+      "temperature": 48,
+      "weatherStatus": "scattered clouds",
+      "weatherIcon": "03n"
+    },
+    {
+      "time": "8 AM",
+      "temperature": 48,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "9 AM",
+      "temperature": 50,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "10 AM",
+      "temperature": 54,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "11 AM",
+      "temperature": 56,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "12 PM",
+      "temperature": 59,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "1 PM",
+      "temperature": 61,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    },
+    {
+      "time": "2 PM",
+      "temperature": 62,
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d"
+    }
+  ],
+  "dailyForecast": [
+    {
+      "dayOfWeek": "Wednesday",
+      "weatherStatus": "light rain",
+      "weatherIcon": "10d",
+      "summary": "Expect a day of partly cloudy with rain",
+      "high": 69,
+      "low": 56
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d",
+      "summary": "Expect a day of partly cloudy with clear spells",
+      "high": 60,
+      "low": 51
+    },
+    {
+      "dayOfWeek": "Friday",
+      "weatherStatus": "clear sky",
+      "weatherIcon": "01d",
+      "summary": "Expect a day of partly cloudy with clear spells",
+      "high": 62,
+      "low": 48
+    },
+    {
+      "dayOfWeek": "Saturday",
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d",
+      "summary": "Expect a day of partly cloudy with clear spells",
+      "high": 57,
+      "low": 46
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "weatherStatus": "moderate rain",
+      "weatherIcon": "10d",
+      "summary": "Expect a day of partly cloudy with rain",
+      "high": 62,
+      "low": 50
+    },
+    {
+      "dayOfWeek": "Monday",
+      "weatherStatus": "overcast clouds",
+      "weatherIcon": "04d",
+      "summary": "There will be partly cloudy today",
+      "high": 55,
+      "low": 51
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "weatherStatus": "scattered clouds",
+      "weatherIcon": "03d",
+      "summary": "You can expect partly cloudy in the morning, with clearing in the afternoon",
+      "high": 63,
+      "low": 52
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "weatherStatus": "few clouds",
+      "weatherIcon": "02d",
+      "summary": "The day will start with clear sky through the late morning hours, transitioning to partly cloudy",
+      "high": 63,
+      "low": 51
+    }
+  ],
+  "uvIndex": 1,
+  "sunriseTime": "7:12 AM",
+  "sunsetTime": "5:19 PM",
+  "windData": {
+    "speed": 16.11,
+    "direction": 260
+  },
+  "feelsLike": 68,
+  "precipitation": 0,
+  "humidity": 63,
+  "dew_point": 55.71,
+  "visibility": 10000,
+  "currentStatusId": 801,
+  "currentStatus": "Clouds",
+  "currentStatusIcon": "02d"
+}
