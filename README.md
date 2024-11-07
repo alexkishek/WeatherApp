@@ -8,7 +8,7 @@
 docker-compose up --build
 ```
 
-- Go to localhost:8080 (React App)
+- Go to localhost:80 (React App)
 - Backend: localhost:3000/api
 
 # OR run manually
