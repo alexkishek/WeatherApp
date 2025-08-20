@@ -1,0 +1,52 @@
+name: Claude Frontend Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'apps/weather-app-react/**'
+      - 'apps/weather-app-react-e2e/**'
+      - 'libs/**'
+      - '*.tsx'
+      - '*.jsx'
+      - 'package.json'
+      - 'tsconfig*.json'
+
+jobs:
+  frontend-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Claude Frontend Review
+        uses: anthropics/claude-code-action@beta
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          use_sticky_comment: true
+          direct_prompt: |
+            Hey! Reviewing React frontend changes in the weather app. Only speak up for real issues:
+
+            **Focus areas for weather-app-react:**
+            - Weather data display accessibility (screen readers, keyboard nav, aria labels)
+            - Loading states for API calls (weather data fetching)
+            - Error handling for failed weather requests
+            - Responsive design for mobile weather viewing
+            - Performance (unnecessary re-renders, large weather data)
+            - Input validation for location searches
+
+            **Skip if:**
+            - Accessibility is already handled properly
+            - Error states are covered
+            - Performance looks good
+            - Code follows React best practices
+
+            Keep it friendly and specific - like a helpful teammate!

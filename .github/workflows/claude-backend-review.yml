@@ -1,0 +1,54 @@
+name: Claude Backend Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'apps/weather-app/**'
+      - 'apps/weather-app-e2e/**'
+      - 'libs/**'
+      - 'docker-compose.yml'
+      - 'nginx.conf'
+      - 'package.json'
+
+jobs:
+  backend-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Claude Backend Review
+        uses: anthropics/claude-code-action@beta
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          use_sticky_comment: true
+          direct_prompt: |
+            Backend review for weather-app! Focus on what matters:
+
+            **Weather API priorities:**
+            - API key security (weather service keys not exposed)
+            - Input validation for location/coordinates
+            - Rate limiting to external weather APIs
+            - Error handling for weather service failures
+            - Caching strategy for weather data
+            - Database queries optimization (if storing weather data)
+
+            **Docker/Infrastructure:**
+            - Security issues in docker-compose or nginx config
+            - Exposed ports or services
+
+            **Skip if:**
+            - Security is already properly handled
+            - Error handling is comprehensive
+            - Performance is reasonable
+
+            Point out real issues and suggest concrete fixes!
