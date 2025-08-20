@@ -174,4 +174,19 @@ export class WeatherController {
   ): Promise<CityDto> {
     return this.weatherService.getCityByCoordinates(lat, lon);
   }
+
+  @Get('alerts')
+  @ApiOperation({ 
+    summary: 'Get weather alerts for location', 
+    description: 'Fetches severe weather alerts based on coordinates.' 
+  })
+  async getWeatherAlerts(
+    @Query('lat') lat: string,
+    @Query('lon') lon: string,
+    @Query('radius') radius: string
+  ) {
+    const alerts = await this.weatherService.getWeatherAlerts(lat, lon, radius);
+    
+    return alerts;
+  }
 }
