@@ -8,6 +8,8 @@ import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { CityDto } from './dto/city.dto';
 import {AirQualityDto} from "./dto/air-quality.dto";
 import {getCachedData} from "../../utils/cache";
+import { GeocodingResponse } from './interfaces/geocoding.interface';
+import { AirQualityResponse } from './interfaces/air-quality.interface';
 
 @Injectable()
 export class WeatherService {
@@ -28,12 +30,12 @@ export class WeatherService {
     this.apiKey = this.configService.get<string>('OPENWEATHER_API_KEY');
   }
 
-  private constructUrl(baseUrl: string, params: Record<string, any> = {}): string {
+  private constructUrl(baseUrl: string, params: Record<string, string | number> = {}): string {
     const queryParams = new URLSearchParams({ ...params, appid: this.apiKey }).toString();
     return `${baseUrl}?${queryParams}`;
   }
 
-  async getWeatherByCity(city): Promise<any> {
+  async getWeatherByCity(city: string): Promise<WeatherResponseDto> {
     const coordinates = await this.getCoordinatesFromCityName(city);
 
     return await this.getWeather(coordinates.lat, coordinates.lon);
@@ -54,7 +56,7 @@ export class WeatherService {
     const cacheKey = `air-quality-${lat}-${lon}`;
 
     return getCachedData(this.cacheManager, cacheKey, async () => {
-      const response = await firstValueFrom(this.httpService.get(url));
+      const response = await firstValueFrom(this.httpService.get<AirQualityResponse>(url));
       const airQualityData = response.data;
 
       return {
@@ -72,7 +74,7 @@ export class WeatherService {
 
     try {
       const response = await firstValueFrom(
-        this.httpService.get<any[]>(url)
+        this.httpService.get<GeocodingResponse[]>(url)
       );
       const data = response.data;
 
@@ -91,7 +93,7 @@ export class WeatherService {
 
     try {
       const response = await firstValueFrom(
-        this.httpService.get<any[]>(url)
+        this.httpService.get<GeocodingResponse[]>(url)
       );
       const data = response.data;
 
@@ -114,7 +116,7 @@ export class WeatherService {
     const url = this.constructUrl(WeatherService.BASE_REVERSE_GEO_URL, { lat, lon, limit: 1 });
 
     try {
-      const response = await firstValueFrom(this.httpService.get<any[]>(url));
+      const response = await firstValueFrom(this.httpService.get<GeocodingResponse[]>(url));
       const data = response.data;
 
       if (data.length === 0) {

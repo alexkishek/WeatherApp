@@ -42,5 +42,3 @@ Thumbs.db
 .nx/workspace-data
 
 vite.config.*.timestamp*
-
-apps/weather-app/.env
