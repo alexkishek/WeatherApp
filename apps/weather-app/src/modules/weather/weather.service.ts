@@ -136,4 +136,12 @@ export class WeatherService {
       throw new HttpException('Failed to retrieve location', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
+
+  async getWeatherAlerts(lat: string, lon: string, radius: string) {
+    const alertsUrl = `https://api.weather.gov/alerts/active?point=${lat},${lon}&radius=${radius}`;
+    
+    const response = await firstValueFrom(this.httpService.get(alertsUrl));
+    
+    return response.data;
+  }
 }
