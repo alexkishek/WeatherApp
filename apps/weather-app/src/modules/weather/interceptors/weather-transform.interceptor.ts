@@ -5,18 +5,19 @@ import {
   CallHandler,
 } from '@nestjs/common';
 import { Observable, map } from 'rxjs';
+import { OpenWeatherResponse, TransformedWeatherData } from '../interfaces/openweather-api.interface';
 
 @Injectable()
 export class WeatherTransformInterceptor implements NestInterceptor {
-  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<TransformedWeatherData> {
     return next.handle().pipe(
-      map((data) => {
+      map((data: OpenWeatherResponse) => {
         return this.parseWeatherData(data);
       })
     );
   }
 
-  private parseWeatherData(data: any): any {
+  private parseWeatherData(data: OpenWeatherResponse): TransformedWeatherData {
     return {
       temperature: Math.round(data.current.temp),
       high: Math.round(Math.max(...data.hourly.map((hour) => hour.temp))),
